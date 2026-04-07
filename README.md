@@ -19,17 +19,20 @@
 ## ✨ Características Destacadas
 
 ### 🔊 Calidad de Audio Superior
+
 - **Hi-Res Lossless por defecto**: Configurado automáticamente para transmitir a la máxima calidad (hasta 24-bit/192kHz).
 - **Audio Adaptativo**: Capacidad de ajustar la calidad en tiempo real si la conexión es inestable.
 - **Soporte de Archivos Locales**: Reproduce tu propia colección de música junto con el streaming.
 
 ### 🎨 Estética "Nebula"
+
 - **Fondo Inmersivo**: Sistema de 9 gradientes radiales animados que crean un efecto de nebulosa profunda.
 - **Glassmorphism Premium**: Interfaz basada en efectos de cristal esmerilado y transparencias.
 - **Neon Glow**: Detalles en cian eléctrico y efectos de iluminación en botones y tarjetas.
 - **Zero-Flicker Technology**: Optimizado con aceleración por hardware para una navegación fluida sin parpadeos.
 
 ### 📱 Experiencia Móvil Optimizada
+
 - **Reproductor Flotante**: Barra de controles rediseñada que flota elegantemente en la parte inferior de tu teléfono.
 - **Diseño Adaptable**: Interfaz que se ajusta perfectamente a cualquier tamaño de pantalla.
 - **PWA Ready**: Instálalo como una aplicación nativa en tu dispositivo móvil.
@@ -38,18 +41,18 @@
 
 ## ⌨️ Atajos de Teclado
 
-| Atajo | Acción |
-| :--- | :--- |
-| `Espacio` | Reproducir / Pausar |
-| `→` / `←` | Saltar 10s adelante / atrás |
+| Atajo               | Acción                       |
+| :------------------ | :--------------------------- |
+| `Espacio`           | Reproducir / Pausar          |
+| `→` / `←`           | Saltar 10s adelante / atrás  |
 | `Shift` + `→` / `←` | Siguiente / Anterior canción |
-| `↑` / `↓` | Subir / Bajar volumen |
-| `M` | Silenciar |
-| `S` | Activar aleatorio |
-| `R` | Repetir |
-| `L` | Mostrar letras (Karaoke) |
-| `/` | Buscar |
-| `Ctrl` + `K` | Paleta de comandos |
+| `↑` / `↓`           | Subir / Bajar volumen        |
+| `M`                 | Silenciar                    |
+| `S`                 | Activar aleatorio            |
+| `R`                 | Repetir                      |
+| `L`                 | Mostrar letras (Karaoke)     |
+| `/`                 | Buscar                       |
+| `Ctrl` + `K`        | Paleta de comandos           |
 
 ---
 
@@ -59,17 +62,17 @@ Si necesitas desplegar o modificar el proyecto en otro entorno:
 
 1. **Requisitos**: Node.js (v20+) o Bun.
 2. **Instalación**:
-   ```bash
-   npm install  # o bun install
-   ```
+    ```bash
+    npm install  # o bun install
+    ```
 3. **Ejecución**:
-   ```bash
-   npm run dev  # o bun run dev
-   ```
+    ```bash
+    npm run dev  # o bun run dev
+    ```
 4. **Build**:
-   ```bash
-   npm run build
-   ```
+    ```bash
+    npm run build
+    ```
 
 ---
 

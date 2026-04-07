@@ -1,7 +1,7 @@
 :root {
     color-scheme: light dark;
 
-    --background: #000000;
+    --background: #000;
     --foreground: #ededed;
     --card: #1a1a1a;
     --card-foreground: #ededed;
@@ -18,7 +18,6 @@
     --highlight-rgb: 59, 130, 246;
     --active-highlight: #3b82f6;
     --explicit-badge: #750a0a;
-
     --font-family: 'Inter', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, sans-serif;
     --font-size-scale: 100%;
     --text-xs: 0.75rem;
@@ -150,38 +149,46 @@
 body[data-theme='dark'] {
     color-scheme: dark;
 
-    --background: radial-gradient(at 0% 0%, #0c0018 0%, transparent 50%),
-                  radial-gradient(at 50% 0%, #001c3d 0%, transparent 50%),
-                  radial-gradient(at 100% 0%, #0e001a 0%, transparent 50%),
-                  radial-gradient(at 0% 50%, #1a0033 0%, transparent 50%),
-                  radial-gradient(at 50% 50%, #000814 0%, transparent 50%),
-                  radial-gradient(at 100% 50%, #120024 0%, transparent 50%),
-                  radial-gradient(at 0% 100%, #001220 0%, transparent 50%),
-                  radial-gradient(at 50% 100%, #0a0014 0%, transparent 50%),
-                  radial-gradient(at 100% 100%, #001a33 0%, transparent 50%),
-                  #020205;
+    --background:
+        radial-gradient(at 0% 0%, #0c0018 0%, transparent 50%), radial-gradient(at 50% 0%, #001c3d 0%, transparent 50%),
+        radial-gradient(at 100% 0%, #0e001a 0%, transparent 50%),
+        radial-gradient(at 0% 50%, #1a0033 0%, transparent 50%),
+        radial-gradient(at 50% 50%, #000814 0%, transparent 50%),
+        radial-gradient(at 100% 50%, #120024 0%, transparent 50%),
+        radial-gradient(at 0% 100%, #001220 0%, transparent 50%),
+        radial-gradient(at 50% 100%, #0a0014 0%, transparent 50%),
+        radial-gradient(at 100% 100%, #001a33 0%, transparent 50%), #020205;
     --foreground: #f0faff;
-    --card: rgba(255, 255, 255, 0.04);
-    --card-foreground: #ffffff;
+    --card: rgb(255, 255, 255, 0.04);
+    --card-foreground: #fff;
     --primary: #00f2ff;
     --primary-foreground: #001a1a;
-    --secondary: rgba(0, 242, 255, 0.1);
+    --secondary: rgb(0, 242, 255, 0.1);
     --secondary-foreground: #e0faff;
-    --muted: rgba(255, 255, 255, 0.05);
+    --muted: rgb(255, 255, 255, 0.05);
     --muted-foreground: #8eaec0;
-    --border: rgba(255, 255, 255, 0.08);
-    --input: rgba(255, 255, 255, 0.03);
+    --border: rgb(255, 255, 255, 0.08);
+    --input: rgb(255, 255, 255, 0.03);
     --ring: #00f2ff;
     --highlight: #00f2ff;
     --highlight-rgb: 0, 242, 255;
     --active-highlight: #00f2ff;
-    --explicit-badge: #ff0055;
+    --explicit-badge: #f05;
 }
 
 @keyframes nebula-pulse {
-    0% { background-position: 0% 0%; background-size: 100% 100%; }
-    50% { background-position: 100% 100%; background-size: 150% 150%; }
-    100% { background-position: 0% 0%; background-size: 100% 100%; }
+    0% {
+        background-position: 0% 0%;
+        background-size: 100% 100%;
+    }
+    50% {
+        background-position: 100% 100%;
+        background-size: 150% 150%;
+    }
+    100% {
+        background-position: 0% 0%;
+        background-size: 100% 100%;
+    }
 }
 
 *,
@@ -213,7 +220,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(0, 242, 255, 0.2);
+    background: rgb(0, 242, 255, 0.2);
     border-radius: 10px;
     border: 2px solid transparent;
     background-clip: padding-box;
@@ -221,7 +228,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 242, 255, 0.4);
+    background: rgb(0, 242, 255, 0.4);
 }
 
 /* Typography Improvements */
@@ -231,13 +238,18 @@ body {
     animation: nebula-pulse 30s ease-in-out infinite alternate;
     background-color: #020205; /* Deep fallback */
     color: var(--foreground);
-    font-family: 'Inter', -apple-system, system-ui, sans-serif !important;
+    font-family:
+        Inter,
+        -apple-system,
+        system-ui,
+        sans-serif !important;
     line-height: 1.6;
     letter-spacing: -0.01em;
     overflow: hidden;
     height: 100%;
     position: fixed;
     width: 100%;
+
     /* Hardware acceleration to prevent flickering */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -843,16 +855,17 @@ ul {
 .sidebar {
     grid-area: sidebar;
     min-height: 0;
-    background: rgba(10, 10, 10, 0.4);
+    background: rgb(10, 10, 10, 0.4);
     backdrop-filter: blur(30px) saturate(150%);
-    -webkit-backdrop-filter: blur(30px) saturate(150%);
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(30px) saturate(150%);
+    border-right: 1px solid rgb(255, 255, 255, 0.05);
     padding: 1.25rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1000;
+
     /* Stability fixes */
     transform: translateZ(0);
     backface-visibility: hidden;
@@ -881,7 +894,7 @@ ul {
     margin-top: auto;
     padding-top: 1rem;
     flex: 0 0 auto;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgb(255, 255, 255, 0.05);
     background: transparent;
     position: relative;
 }
@@ -957,11 +970,11 @@ ul {
 
     /* Glass effect */
     position: fixed !important;
-    background: rgba(20, 20, 20, 0.4) !important;
+    background: rgb(20, 20, 20, 0.4) !important;
     backdrop-filter: blur(40px) saturate(180%);
-    -webkit-backdrop-filter: blur(40px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(40px) saturate(180%);
+    border: 1px solid rgb(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgb(0, 0, 0, 0.6);
 
     /* Stability fixes */
     transform: translateZ(0);
@@ -1155,10 +1168,11 @@ ul {
     top: 0;
     z-index: 1000;
     width: calc(100% + (var(--spacing-xl) * 2));
-    background: rgba(10, 10, 10, 0.15);
+    background: rgb(10, 10, 10, 0.15);
     backdrop-filter: blur(25px) saturate(180%);
-    -webkit-backdrop-filter: blur(25px) saturate(180%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(25px) saturate(180%);
+    border-bottom: 1px solid rgb(255, 255, 255, 0.05);
+
     /* Stability fixes */
     transform: translateZ(0);
     backface-visibility: hidden;
@@ -1248,16 +1262,16 @@ ul {
     min-width: 0;
     flex: 1;
     position: relative;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgb(255, 255, 255, 0.05);
+    border: 1px solid rgb(255, 255, 255, 0.1);
     border-radius: var(--radius-full);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .search-bar:focus-within {
-    background: rgba(0, 242, 255, 0.08);
+    background: rgb(0, 242, 255, 0.08);
     border-color: var(--primary);
-    box-shadow: 0 0 25px rgba(0, 242, 255, 0.25);
+    box-shadow: 0 0 25px rgb(0, 242, 255, 0.25);
     transform: scale(1.02);
 }
 
@@ -1664,24 +1678,26 @@ input[type='search']::-webkit-search-cancel-button {
 
 .card {
     display: block;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgb(255, 255, 255, 0.03);
     backdrop-filter: blur(15px) saturate(160%);
-    -webkit-backdrop-filter: blur(15px) saturate(160%);
+    backdrop-filter: blur(15px) saturate(160%);
     padding: var(--spacing-md);
     border-radius: var(--radius-lg);
     transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
     position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgb(255, 255, 255, 0.05);
+
     /* Prevent flicker on hover */
     backface-visibility: hidden;
     transform: translateZ(0);
 }
 
 .card:hover {
-    background: rgba(0, 242, 255, 0.05);
+    background: rgb(0, 242, 255, 0.05);
     transform: translateY(-12px) scale(1.03);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 
-                0 0 15px rgba(0, 242, 255, 0.2);
+    box-shadow:
+        0 25px 50px rgb(0, 0, 0, 0.5),
+        0 0 15px rgb(0, 242, 255, 0.2);
     border-color: var(--primary);
 }
 
@@ -2630,7 +2646,7 @@ body.multi-select-mode .track-item:hover {
     letter-spacing: 0.05em;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+    box-shadow: 0 0 15px rgb(0, 242, 255, 0.3);
     -webkit-tap-highlight-color: transparent;
     position: relative;
     overflow: hidden;
@@ -2639,7 +2655,7 @@ body.multi-select-mode .track-item:hover {
 
 .btn-primary:hover {
     transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 0 30px rgba(0, 242, 255, 0.6);
+    box-shadow: 0 0 30px rgb(0, 242, 255, 0.6);
     filter: brightness(1.1);
 }
 
@@ -2650,11 +2666,7 @@ body.multi-select-mode .track-item:hover {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(
-        transparent,
-        rgba(255, 255, 255, 0.1),
-        transparent
-    );
+    background: linear-gradient(transparent, rgb(255, 255, 255, 0.1), transparent);
     transform: rotate(45deg);
     transition: 0.5s;
 }
@@ -2670,11 +2682,7 @@ body.multi-select-mode .track-item:hover {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: linear-gradient(
-        transparent,
-        rgba(255, 255, 255, 0.1),
-        transparent
-    );
+    background: linear-gradient(transparent, rgb(255, 255, 255, 0.1), transparent);
     transform: rotate(45deg);
     transition: 0.5s;
 }
@@ -6668,6 +6676,7 @@ img[src=''] {
             'header' auto
             'main' 1fr
             'player' 0 / 1fr; /* Set player area to 0 so it doesn't affect flow */
+
         height: auto;
         min-height: 100vh;
         min-height: 100dvh;
@@ -6690,10 +6699,10 @@ img[src=''] {
         position: sticky;
         top: 0;
         z-index: 1000;
-        background: rgba(10, 10, 10, 0.4);
+        background: rgb(10, 10, 10, 0.4);
         backdrop-filter: blur(25px) saturate(180%);
-        -webkit-backdrop-filter: blur(25px) saturate(180%);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(25px) saturate(180%);
+        border-bottom: 1px solid rgb(255, 255, 255, 0.05);
     }
 
     .sidebar {
@@ -6818,11 +6827,11 @@ img[src=''] {
         left: 3% !important;
         bottom: max(15px, env(safe-area-inset-bottom)) !important;
         border-radius: var(--radius-xl);
-        background: rgba(15, 15, 15, 0.75) !important;
+        background: rgb(15, 15, 15, 0.75) !important;
         backdrop-filter: blur(30px) saturate(160%);
-        -webkit-backdrop-filter: blur(30px) saturate(160%);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(30px) saturate(160%);
+        box-shadow: 0 15px 40px rgb(0, 0, 0, 0.8);
+        border: 1px solid rgb(255, 255, 255, 0.08);
     }
 
     .now-playing-bar .track-info {
@@ -6882,7 +6891,7 @@ img[src=''] {
         background: var(--primary) !important;
         color: var(--primary-foreground) !important;
         border-radius: 50% !important;
-        box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+        box-shadow: 0 0 15px rgb(0, 242, 255, 0.3);
     }
 
     .desktop-only {

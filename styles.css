@@ -229,10 +229,12 @@ body[data-theme='onyx'] .btn-primary:hover {
         background-position: 0% 0%;
         background-size: 100% 100%;
     }
+
     50% {
         background-position: 100% 100%;
         background-size: 150% 150%;
     }
+
     100% {
         background-position: 0% 0%;
         background-size: 100% 100%;
@@ -905,7 +907,6 @@ ul {
     min-height: 0;
     background: rgb(10, 10, 10, 0.4);
     backdrop-filter: blur(30px) saturate(150%);
-    backdrop-filter: blur(30px) saturate(150%);
     border-right: 1px solid rgb(255, 255, 255, 0.05);
     padding: 1.25rem;
     display: flex;
@@ -1019,7 +1020,6 @@ ul {
     /* Glass effect */
     position: fixed !important;
     background: rgb(20, 20, 20, 0.4) !important;
-    backdrop-filter: blur(40px) saturate(180%);
     backdrop-filter: blur(40px) saturate(180%);
     border: 1px solid rgb(255, 255, 255, 0.1);
     box-shadow: 0 10px 40px rgb(0, 0, 0, 0.6);
@@ -1217,7 +1217,6 @@ ul {
     z-index: 1000;
     width: calc(100% + (var(--spacing-xl) * 2));
     background: rgb(10, 10, 10, 0.15);
-    backdrop-filter: blur(25px) saturate(180%);
     backdrop-filter: blur(25px) saturate(180%);
     border-bottom: 1px solid rgb(255, 255, 255, 0.05);
 
@@ -1727,7 +1726,6 @@ input[type='search']::-webkit-search-cancel-button {
 .card {
     display: block;
     background: rgb(255, 255, 255, 0.03);
-    backdrop-filter: blur(15px) saturate(160%);
     backdrop-filter: blur(15px) saturate(160%);
     padding: var(--spacing-md);
     border-radius: var(--radius-lg);
@@ -6766,7 +6764,6 @@ img[src=''] {
         z-index: 1000;
         background: rgb(10, 10, 10, 0.4);
         backdrop-filter: blur(25px) saturate(180%);
-        backdrop-filter: blur(25px) saturate(180%);
         border-bottom: 1px solid rgb(255, 255, 255, 0.05);
     }
 
@@ -6893,7 +6890,6 @@ img[src=''] {
         bottom: max(15px, env(safe-area-inset-bottom)) !important;
         border-radius: var(--radius-xl);
         background: rgb(15, 15, 15, 0.75) !important;
-        backdrop-filter: blur(30px) saturate(160%);
         backdrop-filter: blur(30px) saturate(160%);
         box-shadow: 0 15px 40px rgb(0, 0, 0, 0.8);
         border: 1px solid rgb(255, 255, 255, 0.08);

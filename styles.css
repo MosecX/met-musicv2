@@ -179,23 +179,23 @@ body[data-theme='dark'] {
 body[data-theme='onyx'] {
     color-scheme: dark;
 
-    --background: #000000;
+    --background: #000;
     --foreground: #e5e5e5;
     --card: #0a0a0a;
-    --card-foreground: #ffffff;
-    --primary: #ffffff;
-    --primary-foreground: #000000;
+    --card-foreground: #fff;
+    --primary: #fff;
+    --primary-foreground: #000;
     --secondary: #121212;
     --secondary-foreground: #a3a3a3;
     --muted: #0a0a0a;
     --muted-foreground: #737373;
     --border: #1a1a1a;
     --input: #0f0f0f;
-    --ring: #ffffff;
-    --highlight: #ffffff;
+    --ring: #fff;
+    --highlight: #fff;
     --highlight-rgb: 255, 255, 255;
-    --active-highlight: #ffffff;
-    --explicit-badge: #ff0000;
+    --active-highlight: #fff;
+    --explicit-badge: #f00;
 }
 
 /* Optimization for Onyx theme - Disable expensive effects */
@@ -203,7 +203,7 @@ body[data-theme='onyx'],
 body[data-theme='onyx'] * {
     animation: none !important;
     backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
     transition: none !important;
 }
 
@@ -3739,11 +3739,11 @@ input:checked + .slider::before {
 /* Nebula Theme (Blur) */
 body[data-theme='dark'] #context-menu,
 body[data-theme='dark'] #sort-menu {
-    background: rgba(10, 10, 10, 0.7);
+    background: rgb(10, 10, 10, 0.7);
     backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgb(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgb(0, 0, 0, 0.5);
 }
 
 /* Onyx Theme (Solid) */
@@ -3751,9 +3751,9 @@ body[data-theme='onyx'] #context-menu,
 body[data-theme='onyx'] #sort-menu {
     background: #0a0a0a;
     border: 1px solid #1a1a1a;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.8);
     backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
 }
 
 #context-menu ul,

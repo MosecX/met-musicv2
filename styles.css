@@ -1399,6 +1399,30 @@ body.has-page-background .track-item:hover {
     transform-origin: top;
 }
 
+body[data-theme='nebula'] .search-history {
+    background: rgba(0, 0, 0, 0.3) !important; /* Más presencia para que el efecto cristal/blur sea innegable */
+    backdrop-filter: blur(40px) saturate(150%) !important; /* Blur intenso y saturación para que no parezca transparencia plana */
+    -webkit-backdrop-filter: blur(40px) saturate(150%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6) !important;
+    color: #fff !important;
+    transform: none !important;
+    animation: none !important;
+}
+
+body[data-theme='nebula'] .search-history-item:hover {
+    background: rgba(255, 255, 255, 0.1); /* hover claro para nebula */
+}
+
+body[data-theme='nebula'] .search-history-clear-all {
+    border-top-color: rgba(255, 255, 255, 0.1); /* borde claro */
+}
+
+body[data-theme='nebula'] .search-history-clear-all:hover {
+    background: rgba(255, 255, 255, 0.1); /* hover claro */
+}
+
+
 .search-history-item {
     padding: 0.75rem 1rem;
     display: flex;
@@ -3754,7 +3778,7 @@ input:checked + .slider::before {
 /* Nebula Theme (Blur) */
 body[data-theme='nebula'] #context-menu,
 body[data-theme='nebula'] #sort-menu {
-    background: rgb(10, 10, 10, 0.7);
+    background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(20px) saturate(180%);
     backdrop-filter: blur(20px) saturate(180%);
     border: 1px solid rgb(255, 255, 255, 0.1);

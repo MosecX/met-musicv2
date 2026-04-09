@@ -330,9 +330,9 @@ export const themeManager = {
 
     getTheme() {
         try {
-            return localStorage.getItem(this.STORAGE_KEY) || 'dark';
+            return localStorage.getItem(this.STORAGE_KEY) || 'nebula';
         } catch {
-            return 'dark';
+            return 'nebula';
         }
     },
 

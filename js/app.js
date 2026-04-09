@@ -673,10 +673,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    // Kuroshiro is now loaded on-demand only when needed for Asian text with Romaji mode enabled
+    // Theme initialization
+    const savedTheme = localStorage.getItem('monochrome-theme');
+    let themeToApply = savedTheme || 'nebula';
 
-    const currentTheme = themeManager.getTheme();
-    themeManager.setTheme(currentTheme);
+    // Fallback to Onyx for Safari/iOS if no theme is saved yet (optimized for performance)
+    if (!savedTheme && (isSafari || isIos)) {
+        themeToApply = 'onyx';
+    }
+
+    themeManager.setTheme(themeToApply);
 
     // Restore sidebar state
     sidebarSettings.restoreState();

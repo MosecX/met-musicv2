@@ -448,12 +448,20 @@ class CommandPalette {
                 action: () => this.setTheme('monochrome'),
             },
             {
+                id: 'theme-nebula',
+                group: 'Theme',
+                icon: 'palette',
+                label: 'Theme: Nebula (Full)',
+                keywords: ['theme', 'nebula', 'full', 'blur', 'glass'],
+                action: () => this.setTheme('nebula'),
+            },
+            {
                 id: 'theme-dark',
                 group: 'Theme',
                 icon: 'moon',
-                label: 'Theme: Dark',
-                keywords: ['theme', 'dark'],
-                action: () => this.setTheme('dark'),
+                label: 'Theme: Onyx (Optimized)',
+                keywords: ['theme', 'dark', 'onyx', 'optimized'],
+                action: () => this.setTheme('onyx'),
             },
             {
                 id: 'theme-white',
